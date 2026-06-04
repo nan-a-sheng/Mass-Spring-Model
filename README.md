@@ -59,6 +59,22 @@ python cloth.py
 ### 阻尼系数为5
 <img width="640" height="662" alt="uBX6nfqT_converted" src="https://github.com/user-attachments/assets/b7264b47-be07-4709-963b-b210363e49ea" />
 
+## ✨ 选做拓展功能
+### 1. 三类完整弹簧模型
+在原生结构弹簧基础上新增：剪切弹簧（防对角拉伸）+弯曲弹簧（抑制过度弯折），布料刚性提升，褶皱与形变更贴近现实织物。
+- Structural：横竖相邻质点
+- Shear：对角线相邻质点
+- Bending：间隔一格的远距离质点
+可调参数：`k_shear、k_bend`
+
+### 2. 球体碰撞物理
+场景中央生成红色实心球体，布料下落与球体发生碰撞：
+- 质点穿入球体后自动被顶回球面；
+- 附带简易法向速度阻尼反弹；
+可修改 `sphere_pos、sphere_radius` 调整球体位置与大小。
+
+## 效果展示
+<img width="800" height="827" alt="7-ezgif com-video-to-gif-converter" src="https://github.com/user-attachments/assets/f392d878-6700-40b9-b38f-67f04bc543ee" />
 
 ---
 项目用途：计算机图形学、游戏物理、弹簧质点系统学习演示
